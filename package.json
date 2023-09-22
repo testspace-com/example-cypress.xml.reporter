@@ -1,0 +1,17 @@
+{
+  "name": "example-cypress.xml.reporter",
+  "version": "1.0.0",
+  "description": "Example using Cypress XML Reporter capturing results in Testspace",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.2.0",
+    "cypress-terminal-report": "^5.3.6",
+    "cypress-xml-reporter": "^1.0.0"
+  }
+}
