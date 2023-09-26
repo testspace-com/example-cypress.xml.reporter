@@ -2,16 +2,25 @@
   "name": "example-cypress.xml.reporter",
   "version": "1.0.0",
   "description": "Example using Cypress XML Reporter capturing results in Testspace",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cypress",
+    "testspace",
+    "javascript",
+    "node",
+    "examples"
+  ],
+  "author": "Mark Underseth",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/testspace-com/example-cypress.xml.reporter/issues"
+  },
+  "homepage": "https://github.com/testspace-com/example-cypress.xml.reporter#readme",
   "devDependencies": {
     "cypress": "^13.2.0",
     "cypress-terminal-report": "^5.3.6",
-    "cypress-xml-reporter": "^1.0.0"
+    "cypress-xml-reporter": "^1.0.1"
   }
 }
