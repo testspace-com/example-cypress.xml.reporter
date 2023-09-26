@@ -1,0 +1,24 @@
+name: Test
+on:
+  push:
+    paths-ignore:
+      - 'assets'
+      - '**.md'
+  schedule:
+    - cron:  '0 1 * * 0'
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - uses: testspace-com/setup-testspace@v1
+        with:
+          domain: ${{github.repository_owner}}
+      - run: npm ci
+      - run: npm test
+      - name: Push test result to Testspace
+        run: |
+          testspace results/**/*.xml{cypress/e2e}
+        if: always()
